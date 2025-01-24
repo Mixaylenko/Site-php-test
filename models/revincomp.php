@@ -28,11 +28,13 @@
         if (mb_strlen($rev) > $maxLength) {
             $shortRev .= '...'; // Добавляем многоточие, если строка была обрезана
         }
-        echo '<div class="feedback">
-                <div class="rewblock">
-                    <h3>'.$el->Name.'</h3>
-                    <p>'.$shortRev.' </p>
-                </div>
-            </div>';
+        echo '<a href="rev.php?id='.$el->Id_review.'">
+                <div class="feedback">
+                    <div class="rewblock">
+                        <h3>'.$el->Name.'</h3>
+                        <p>'.$shortRev.' </p>
+                    </div>
+                </div> 
+            </a>';
     }
 ?>

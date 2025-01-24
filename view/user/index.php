@@ -26,6 +26,7 @@
                     <?php require_once '../../models/all.php';?>
                 </div>
             </div>
+            <h2> <?php require_once '../../controls/page.php'; ?> </h2>
         </div>
     <?php require_once "../blocks/footer.php"; ?>
 </body>

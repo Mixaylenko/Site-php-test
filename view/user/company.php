@@ -48,26 +48,12 @@ require_once '../../models/I.php';?>
                                 <button type="submit">Отправить</button>
                             </form>
                         <?php } 
-                    }
+                    } ?>
                     
-                    // Loop through and display all reviews
-                    foreach ($reviews as $review) { ?>
-                        <a <?php echo 'href="rev.php?id='.$review->Id_review.'"' ?> ><div class="rewblock">
-                            <?php 
-                            $maxLength = 100; // Максимальное количество символов
-                            $rev = nl2br(htmlspecialchars($review->Review));
-                            $shortRev = mb_substr($rev, 0, $maxLength); // Обрезаем строку до 200 символов
-                            
-                            if (mb_strlen($rev) > $maxLength) {
-                                $shortRev .= '...'; // Добавляем многоточие, если строка была обрезана
-                            }
-                            echo '<h3>' . htmlspecialchars($review->Name) . '</h3>
-                                  <p>' . $shortRev  . '</p>'; 
-                            ?>
-                        </div> </a>
-                    <?php } ?>
+                <?php require_once '../../models/revincomp.php';?>
             </div>
         </div>
+        <h2> <?php require_once '../../controls/page.php'; ?> </h2>
     </div>
     <?php require_once "../blocks/footer.php"; ?>
 

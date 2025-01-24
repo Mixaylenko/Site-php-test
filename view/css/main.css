@@ -1,0 +1,336 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: #fff;
+    font-size: 16px;
+    background: #000;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+.wrapper {
+    background: linear-gradient(180deg, rgb(29, 28, 28) 0%, rgba(26, 14, 1, 1) 100%);
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 1400px;
+    margin: 0 auto;
+}
+
+header {
+    padding: 50px 0;
+}
+
+header .logo,
+footer .blocks .logo {
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 100;
+}
+
+header nav {
+    float: right;
+    width: 70%;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+    position: relative;
+}
+
+header nav ul li {
+    display: inline-block;
+}
+
+header nav ul li a {
+    color: #fff
+}
+
+header nav ul li.active::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 5px;
+    background: #DC7000;
+    border-radius: 10px;
+    position: relative;
+    top: 10px;
+    left: -15px;
+}
+
+header nav ul li:not(.active):not(.btn) a:hover {
+    border-bottom: 5px solid #DC7000;
+}
+
+header nav ul li.btn a,
+.email .block button {
+    background: #FA9021;
+    padding: 9px 17px;
+    border-radius: 5px;
+    transition: all 500ms ease;
+}
+
+header nav ul li.btn a:hover,
+.email .block button:hover {
+    background: #a02604;
+}
+
+/* Секция с компаниями */
+.trending {
+    padding-top: 50px;
+}
+
+.trending h3 {
+    font-weight: 600;
+    font-size: 31px;
+}
+
+.trending .see-all,
+.projects .see-all {
+    color: #fff;
+    background: #25211D;
+    border-radius: 5px;
+    padding: 12px 23px;
+    float: right;
+    display: block;
+    transition: all 500ms ease;
+}
+
+.trending .see-all:hover,
+.projects .see-all:hover {
+    transform: scale(1.1);
+}
+
+.trending .companies {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 50px 0;
+}
+
+.trending .companies span {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.trending .companies span img {
+    position: relative;
+    top: 5px;
+    margin-right: 7px;
+}
+.big-text {
+    padding: 50px 0;
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+    width: 800px;
+}
+/*Пагинация*/
+.pagination {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center the pagination items */
+    margin: 20px 0; /* Add some margin for spacing */
+}
+
+.pagination a, .pagination strong {
+    color: #fff; /* Set text color */
+    padding: 10px 15px; /* Add padding for clickable area */
+    border: 1px solid #DC7000; /* Optional: Add border for links */
+    border-radius: 5px; /* Rounded corners */
+    margin: 0 5px; /* Space between pagination items */
+    transition: background 0.3s; /* Smooth background transition */
+}
+
+.pagination a:hover {
+    background: #DC7000; /* Change background on hover */
+    color: #ffffff; /* Change text color on hover */
+}
+
+.pagination strong {
+    background: #DC7000; /* Highlight current page */
+    color: #ffffff; /* Change text color for current page */
+}
+/* Стили для блока комментариев */
+.rewblock {
+    background-color: #FA9021; /* Светлый фон для блока комментария */
+    border: 1px solid #d5e523; /* Светлая рамка */
+    border-radius: 5px; /* Закругленные углы */
+    padding: 15px; /* Отступы внутри блока */
+    margin: 10px 0; /* Отступы между блоками */
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1); /* Легкая тень для глубины */
+}
+
+.rewblock h3 {
+    margin: 0 0 5px; /* Отступы для заголовка */
+    font-size: 1.2em; /* Размер шрифта для имени пользователя */
+    color: #ffffff; /* Цвет текста для заголовка */
+}
+
+.rewblock p {
+    margin: 0; /* Убираем отступы для параграфа */
+    font-size: 1em; /* Размер шрифта для текста отзыва */
+    color: #ffffff; /* Цвет текста для отзыва */
+}
+
+
+/* доп секция */
+.features {
+    background: url('/img/BG.png') no-repeat center center fixed;
+    background-size: cover;
+    padding: 80px 0;
+}
+
+.features h3,
+.features p {
+    margin-bottom: 20px;
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.features h3 {
+    font-size: 30px;
+}
+
+.features .info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.features .info .block {
+    text-align: center;
+    width: 20%;
+    margin: 30px 2%;
+}
+
+.features .info .block img {
+    margin-bottom: 15px;
+}
+
+/* Страница контакты */
+.feedback {
+    padding: 70px 0;
+    background: #1C140F;
+}
+
+.feedback h2 {
+    text-align: center;
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.feedback p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.feedback form {
+    margin: 80px auto;
+    width: 600px;
+}
+
+.feedback form .inline {
+    display: flex;
+    justify-content: space-between;
+}
+
+.feedback form .inline>div {
+    width: 50%;
+}
+
+.feedback form label {
+    color: #4F4F4F;
+    font-size: 14px;
+}
+
+.feedback form input,
+.feedback form textarea {
+    background: #2C2420;
+    border-radius: 10px;
+    border: 0.6px solid #CECECE;
+    display: block;
+    width: 90%;
+    padding: 15px 10px;
+    outline: none;
+    color: #fff;
+    margin-top: 7px;
+    margin-bottom: 20px;
+}
+
+.feedback form .one-line {
+    width: 96%;
+}
+
+.feedback form textarea {
+    resize: none;
+    height: 200px;
+}
+
+.feedback form button {
+    background: #DC7000;
+    border-radius: 5px;
+    border: 0;
+    float: right;
+    cursor: pointer;
+    color: #fff;
+    padding: 15px 35px;
+    transition: all 500ms ease;
+}
+
+.feedback form button:hover {
+    background: #b01414;
+}
+
+/* Footer */
+footer {
+    background: #000;
+    padding: 50px 0;
+}
+
+footer .blocks {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .blocks p {
+    width: 300px;
+    margin: 15px 0;
+}
+
+footer .blocks h4 {
+    font-weight: 500;
+    font-size: 17px;
+}
+
+footer .blocks ul {
+    list-style: none;
+}
+
+footer .blocks ul li {
+    margin-top: 7px;
+    opacity: 0.8;
+}
+
+footer hr {
+    margin: 30px 0;
+    border: 0;
+    height: 0.6px;
+    background: #ccc;
+}
+
+footer>p {
+    text-align: center;
+}

@@ -17,11 +17,9 @@ require_once '../../models/I.php';?>
         <div class="feedback">
             <div class="container">
                 <?php foreach ($companies as $company)
-                    $info = nl2br(htmlspecialchars($company->Info));
                     echo '<h2>'.$company->Name.'</h2>
                         <h2><img src="/view/img/'.$company->Img_path.'" alt=""style="width: 300px; height: 300px;"></h2>
-                        <h3>'.$info.'</h3>' ?>
-                <h2>Отзовы</h2> 
+                        <h3 style="white-space: pre-wrap;">'.$company->Info.'</h3>' ?>
                 <h1>Отзовы</h1> 
                 <?php 
                     if ($_SESSION['role'] != 'guest' && $_SESSION['role'] != null) { 
